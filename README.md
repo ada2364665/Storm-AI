@@ -11,7 +11,7 @@ This repository is structured as follows:
 
 /node_modules: Contains all the project dependencies and packages required for the development and running of the application.
 
-Prototype Overview
+# Prototype Overview
 This prototype works as follows:
 
 Frontend: Built with JavaScript, HTML/CSS, and React for a responsive user interface.
