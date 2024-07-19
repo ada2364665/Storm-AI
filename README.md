@@ -25,10 +25,11 @@ AI Models: Utilizes Gemini for natural language processing and idea generation.
 The purpose of this repository is to provide a collaborative space for the development and improvement of the Storm AI platform. By making the repository publicly accessible, we aim to foster community engagement, allowing developers, contributors, and users to explore the codebase, report issues, and suggest enhancements.
 
 # How AI Models Power Storm AI
-S
-torm AI leverages the integration of multiple AI models, including Gemini, to generate innovative business ideas and market insights. 
+Storm AI leverages the integration of multiple AI models, including Gemini, to generate innovative business ideas and market insights. 
 Key features include:
 
-Simplified and user-friendly interface
-Real-time data analysis for updated market insights
-Versatile use cases including idea generation, market analysis, and more
+Simplified and user-friendly interface.
+
+Real-time data analysis for updated market insights.
+
+Versatile use cases including idea generation, market analysis, and more.
