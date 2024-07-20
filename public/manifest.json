@@ -1,0 +1,25 @@
+{
+  "short_name": "Storm AI",
+  "name": "Storm AI: Brainstorming Assistant",
+  "icons": [
+    {
+      "src": "stormai.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "stormai.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "stormai2.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
