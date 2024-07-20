@@ -80,6 +80,7 @@ function App() {
   return (
     <div className="app">
       <header>
+        <div className="header-title">Brainstroming the future:✨StormAI✨</div>
         <nav>
         <Link to="/signin">
             <button className="button-circle">Sign In</button>
@@ -91,11 +92,11 @@ function App() {
       </header>
       
       <main>
-        <img 
+        {/* <img 
           src={newLogo} 
           alt="newLogo" 
           className="logo"
-        />
+        /> */}
         <div className="chat-container">
           <div className="chat-box">
             {messages.map((msg, index) => (
@@ -109,7 +110,7 @@ function App() {
             <input 
               type="text" 
               className="chat-input"
-              placeholder="Type your message here..."
+              placeholder= 'What is "the next Billion dollar idea"...'
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
@@ -122,10 +123,10 @@ function App() {
       
       <footer>
         <div className="footer-left">
-          <a href="#">Building the future!</a>
+          <a href="#">No one is perfect, including me.</a>
         </div>
         <div className="footer-right">
-          <a href="#">StormAI is powered by Google's Gemini</a>
+          <a href="#">Powered by Gemini Pro.</a>
         </div>
       </footer>
     </div>

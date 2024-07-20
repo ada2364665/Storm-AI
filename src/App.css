@@ -18,9 +18,15 @@ body {
 header {
   display: flex;
   justify-content: flex-end;
-  padding: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px; /* Increased padding to prevent overlap */
+  position: fixed;
+  width: 100%;
+  background: transparent; 
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 /* Navigation */
@@ -43,12 +49,13 @@ nav a:hover, nav button:hover {
 }
 
 .sign-in-button {
-  background: linear-gradient(45deg, #1abc9c, #16a085);
+  background: #0b8ce2; /* Bright blue */
   color: white;
   padding: 10px 24px;
   border-radius: 30px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transition: background 0.3s, box-shadow 0.3s;
+  margin-right: 15px; /* Space between buttons */
 }
 
 .sign-in-button:hover {
@@ -63,7 +70,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 100px 20px 20px; /* Added padding-top to avoid overlap */
 }
 
 /* Logo */
@@ -90,7 +97,7 @@ main {
 }
 
 .search-input:focus {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(73, 72, 72, 0.2);
   border-color: #16a085;
   outline: none;
 }
@@ -131,45 +138,58 @@ main {
 }
 
 /* Footer */
+/* Footer */
 footer {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px 30px;
+  background: transparent;
+  padding: 5px 10px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); */
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
+/* Ensure text inside footer is aligned properly */
 footer a {
   color: #ecf0f1;
   text-decoration: none;
-  margin-right: 20px;
-  transition: color 0.3s;
+  margin: 0 10px; /* Adjust margin for spacing */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis if text overflows */
 }
+
 
 footer a:hover {
   color: #1abc9c;
 }
 
 /* Chat Styles */
+/* Chat Styles */
 .chat-container {
   display: flex;
   flex-direction: column;
   height: 80vh;
-  border: 2px solid #1abc9c;
-  border-radius: 15px;
+  border-radius: 15px; /* Retain rounded corners */
   overflow: hidden;
   max-width: 1000px;
   width: 100%;
-  margin: 20px auto;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none; /* Remove box shadow */
+  background: transparent; /* Ensure background is transparent */
+  position: fixed; /* Keep chat box fixed */
+  bottom: 80px; /* Adjust to ensure it's not hidden by the footer */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  z-index: 1000; /* Ensure it stays above other content */
 }
+
+
 
 .chat-box {
   flex: 1;
   padding: 15px;
   overflow-y: auto;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(18, 75, 85, 0.3);
 }
 
 .message {
@@ -206,7 +226,7 @@ footer a:hover {
   display: flex;
   border-top: 2px solid #1abc9c;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(250, 250, 250, 0.841);
 }
 
 .chat-input {
@@ -214,8 +234,8 @@ footer a:hover {
   padding: 12px;
   border: 2px solid #1abc9c;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ecf0f1;
+  background: rgba(154, 166, 168, 0.1);
+  color: #000000;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: background 0.3s, border-color 0.3s;
 }
@@ -251,3 +271,12 @@ button:hover {
   border-radius: 5px;
   margin-top: 15px;
 }
+/* Header Title */
+.header-title {
+  flex-grow: 1; /* Take up remaining space */
+  text-align: left;
+  font-size: 20px; /* Adjust size as needed */
+  color: #ffffff; /* Match the color of the text */
+  align-items: center;
+}
+
