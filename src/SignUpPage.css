@@ -1,34 +1,52 @@
 /* src/SignUpPage.css */
-.signup-page {
+.sign-in-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-  }
+    justify-content: center;
+    height: 100vh;
+    background-color: #0f2429;
+}
   
-  .signup-page form {
+.sign-in-page h1 {
+    margin-bottom: 20px;
+}
+  
+.sign-in-page p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+  
+.sign-in-form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
+    width: 300px;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+  
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.form-group input {
     width: 100%;
-  }
+    padding: 8px;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
   
-  .signup-page label {
-    margin-bottom: 1rem;
-  }
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
   
-  .signup-page input {
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-  }
-  
-  .signup-page button {
-    padding: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .error-message {
-    color: red;
-    margin-top: 1rem;
-  }
-  
+button:hover {
+    background-color: #0056b3;
+}
