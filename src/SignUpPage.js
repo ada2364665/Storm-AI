@@ -5,11 +5,32 @@ import './SignUpPage.css'; // Make sure to import the CSS file
 function SignUpPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState(''); // To display success/error messages
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Add sign-up logic here
-    console.log('Sign-up details:', { email, password });
+
+    try {
+      const response = await fetch('/api/signup', { // Update this URL based on your API endpoint
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setMessage('Sign-up successful!');
+        setEmail(''); // Clear the input fields
+        setPassword('');
+      } else {
+        setMessage(`Error: ${result.error || 'An error occurred.'}`);
+      }
+    } catch (error) {
+      setMessage(`Error: ${error.message}`);
+    }
   };
 
   return (
@@ -41,6 +62,7 @@ function SignUpPage() {
         </div>
         <button type="submit">Sign Up</button>
       </form>
+      {message && <p className="message">{message}</p>} {/* Display success/error messages */}
     </div>
   );
 }
