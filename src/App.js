@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 import newLogo from './newLogo.png';
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import { marked } from 'marked';
+// import { Router } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import SignInButton from './SignInButton';
+import SignInPage from './SignInPage'; 
 
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
 
@@ -74,7 +79,7 @@ function App() {
     <div className="app">
       <header>
         <nav>
-          <button className="sign-in-button">Sign in</button>
+        <SignInButton />
         </nav>
       </header>
       
@@ -119,5 +124,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

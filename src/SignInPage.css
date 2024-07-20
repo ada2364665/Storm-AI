@@ -1,0 +1,52 @@
+.sign-in-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0f2429;
+  }
+  
+  .sign-in-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .sign-in-page p {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  
+  .sign-in-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 25px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
