@@ -8,6 +8,8 @@ import { marked } from 'marked';
 // import { useNavigate } from 'react-router-dom';
 import SignInButton from './SignInButton';
 import SignInPage from './SignInPage'; 
+import SignUpPage from './SignUpPage'; 
+import { Link } from 'react-router-dom';
 
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
 
@@ -79,7 +81,12 @@ function App() {
     <div className="app">
       <header>
         <nav>
-        <SignInButton />
+        <Link to="/signin">
+            <button className="button-circle">Sign In</button>
+          </Link>
+          <Link to="/signup">
+            <button className="button-circle">Sign Up</button>
+          </Link>
         </nav>
       </header>
       

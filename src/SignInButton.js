@@ -9,7 +9,7 @@ function SignInButton() {
   };
   
   return (
-    <button className="SignInButton" onClick={handleClick}>Sign in</button>
+    <button className="sign-in-button" onClick={handleClick}>Sign in</button>
   );
 }
 
