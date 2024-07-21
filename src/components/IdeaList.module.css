@@ -1,0 +1,55 @@
+.idea-list {
+  padding: 20px 20px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #222121;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.idea-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.idea-item h2 {
+  margin: 0;
+}
+
+.idea-item .description {
+  font-size: 18px;
+}
+
+.idea-item .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.idea-item .buttons button {
+  border-radius: 5px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #222121;
+  margin: 0;
+}
+
+.idea-item .buttons button:hover {
+  scale: 1.05;
+}
+
+.idea-item .buttons button img {
+  height: 20px;
+}
+
+.idea-item .buttons button:first-child {
+  color: rgb(0, 179, 77);
+}
+
+.idea-item .buttons button:last-child {
+  color: rgb(255, 20, 67);
+}
